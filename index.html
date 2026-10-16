@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Takshil Navadia — Software Developer</title>
+  <title>Takshil Navadia | Software Developer</title>
   <meta name="description"
-    content="Takshil Navadia — software developer from Ahmedabad. Solo-built a live e-commerce platform with real payments. Open to frontend, AI/ML and product roles, and to building products for your company.">
+    content="Takshil Navadia, software developer from Ahmedabad. Solo-built a live e-commerce platform with real payments. Open to frontend, AI/ML and product roles, and to building products for your company.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Takshil Navadia — Software Developer">
+  <meta property="og:title" content="Takshil Navadia | Software Developer">
   <meta property="og:description"
-    content="Solo-built a live e-commerce platform with real payments. Open to frontend, AI/ML and product roles — and to building products for your company.">
+    content="Solo-built a live e-commerce platform with real payments. Open to frontend, AI/ML and product roles, and to building products for your company.">
   <meta name="theme-color" content="#0A0B0F">
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234F6BFF'/%3E%3Cstop offset='1' stop-color='%238B5CF6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ETN%3C/text%3E%3C/svg%3E">
@@ -410,8 +410,7 @@
     .intro-hello {
       font-family: var(--mono);
       font-size: .85rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
+      letter-spacing: .02em;
       color: #8FA0FF;
       margin-bottom: 16px;
       opacity: 0;
@@ -526,8 +525,7 @@
       margin-top: 42px;
       font-family: var(--mono);
       font-size: .74rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
+      letter-spacing: .02em;
       color: var(--ink-dim)
     }
 
@@ -613,7 +611,6 @@
       font-family: var(--mono);
       font-size: .6rem;
       letter-spacing: .1em;
-      text-transform: uppercase;
       color: #fff;
       background: var(--grad);
       padding: 4px 9px;
@@ -665,7 +662,7 @@
       border-top: 1px solid var(--line);
       font-family: var(--mono);
       font-size: .64rem;
-      letter-spacing: .06em;
+      letter-spacing: .01em;
       color: var(--tint)
     }
 
@@ -777,8 +774,7 @@
       z-index: 6;
       font-family: var(--mono);
       font-size: .72rem;
-      letter-spacing: .16em;
-      text-transform: uppercase;
+      letter-spacing: .02em;
       color: rgba(255, 255, 255, .6);
       transition: opacity .4s
     }
@@ -1019,30 +1015,31 @@
       }
     }
 
-    /* last scene: the laptop screen */
+    /* last scene: the laptop screen showing search results */
     .cine-screen {
       position: absolute;
       left: 50%;
       top: 50%;
       z-index: 3;
-      width: min(760px, 92vw);
-      transform: translate(-50%, -50%) scale(.12);
+      width: min(980px, 94vw);
+      transform: translate(-50%, -50%) scale(calc(var(--cs-s, 1) * .12));
       opacity: 0;
-      border-radius: 18px;
+      border-radius: 16px;
       background: #0f1117;
-      border: 1px solid rgba(255, 255, 255, .15);
-      box-shadow: 0 40px 120px rgba(0, 0, 0, .8), 0 0 140px rgba(91, 124, 255, .28);
+      border: 1px solid rgba(255, 255, 255, .14);
+      box-shadow: 0 40px 120px rgba(0, 0, 0, .8), 0 0 140px rgba(91, 124, 255, .25);
       overflow: hidden;
+      text-align: left;
       transition: transform .75s var(--ease), opacity .4s
     }
 
     .p-screen .cine-screen {
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(var(--cs-s, 1));
       opacity: 1
     }
 
     .p-go .cine-screen {
-      transform: translate(-50%, -50%) scale(1.5);
+      transform: translate(-50%, -50%) scale(calc(var(--cs-s, 1) * 1.4));
       opacity: 0;
       transition: transform .8s ease-in, opacity .7s ease-in
     }
@@ -1051,7 +1048,7 @@
       display: flex;
       align-items: center;
       gap: 7px;
-      padding: 12px 14px;
+      padding: 11px 14px;
       border-bottom: 1px solid rgba(255, 255, 255, .08);
       background: rgba(255, 255, 255, .03)
     }
@@ -1077,22 +1074,27 @@
       font-size: .7rem;
       color: var(--ink-dim);
       background: rgba(255, 255, 255, .05);
-      padding: 4px 40px;
+      padding: 4px 48px;
       border-radius: 8px
     }
 
     .cs-body {
       position: relative;
-      padding: 34px 34px 30px
+      padding: 22px 28px 26px
+    }
+
+    .cs-head {
+      display: flex;
+      align-items: center;
+      gap: 22px
     }
 
     .cs-logo {
       font-family: var(--display);
       font-weight: 600;
-      font-size: 1.9rem;
+      font-size: 1.5rem;
       letter-spacing: -.03em;
-      text-align: center;
-      margin-bottom: 18px
+      flex-shrink: 0
     }
 
     .cs-logo span {
@@ -1103,13 +1105,14 @@
     }
 
     .cs-input {
+      flex: 1;
       display: flex;
       align-items: center;
       gap: 12px;
       border: 1px solid rgba(255, 255, 255, .18);
       border-radius: 100px;
-      padding: 13px 20px;
-      font-size: 1.08rem;
+      padding: 11px 20px;
+      font-size: 1.02rem;
       background: rgba(255, 255, 255, .03);
       transition: border-color .2s, box-shadow .2s
     }
@@ -1133,19 +1136,48 @@
       color: var(--ink-dim)
     }
 
-    .cs-results {
-      margin-top: 20px;
+    .cs-tabs {
+      display: flex;
+      gap: 22px;
+      margin: 16px 0 0 calc(1.5rem * 3.6 + 22px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      font-size: .84rem;
+      color: var(--ink-dim)
+    }
+
+    .cs-tabs span {
+      padding: 0 2px 10px
+    }
+
+    .cs-tabs .on {
+      color: #9DB0FF;
+      box-shadow: inset 0 -2px #5B7CFF
+    }
+
+    .cs-grid {
       display: grid;
-      gap: 10px
+      grid-template-columns: 1.45fr 1fr;
+      gap: 26px;
+      margin-top: 18px
+    }
+
+    .cs-results {
+      display: grid;
+      gap: 6px;
+      align-content: start
+    }
+
+    .cs-res,
+    .cs-panel {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .45s, transform .45s var(--ease), background .25s, border-color .25s
     }
 
     .cs-res {
-      padding: 12px 16px;
+      padding: 10px 14px 12px;
       border-radius: 14px;
-      border: 1px solid transparent;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity .4s, transform .4s var(--ease), background .25s, border-color .25s
+      border: 1px solid transparent
     }
 
     .cs-res:nth-child(2) {
@@ -1156,16 +1188,53 @@
       transition-delay: .24s
     }
 
-    .p-results .cs-res {
+    .cs-panel {
+      transition-delay: .18s
+    }
+
+    .p-results .cs-res,
+    .p-results .cs-panel {
       opacity: 1;
       transform: none
     }
 
-    .cs-res small {
+    .cs-site {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .8rem;
+      line-height: 1.3;
+      color: var(--ink)
+    }
+
+    .cs-site small {
       display: block;
       font-family: var(--mono);
       font-size: .66rem;
       color: var(--ink-dim)
+    }
+
+    .fav {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-style: normal;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: .62rem;
+      color: #fff;
+      background: #2a2e3a;
+      flex-shrink: 0
+    }
+
+    .fav-tn {
+      background: linear-gradient(135deg, #5B7CFF, #8B5CF6)
+    }
+
+    .fav-in {
+      background: #2563EB
     }
 
     .cs-res b {
@@ -1174,18 +1243,137 @@
       font-family: var(--display);
       font-weight: 600;
       font-size: 1.08rem;
-      margin: 2px 0
+      margin: 8px 0 3px
     }
 
     .cs-res p {
       font-size: .84rem;
       color: var(--ink-soft);
-      line-height: 1.45
+      line-height: 1.5
+    }
+
+    .cs-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px
+    }
+
+    .cs-links span {
+      font-size: .76rem;
+      color: #9DB0FF;
+      border: 1px solid rgba(157, 176, 255, .25);
+      padding: 4px 11px;
+      border-radius: 100px
     }
 
     .p-click .cs-res.hit {
-      background: rgba(91, 124, 255, .12);
+      background: rgba(91, 124, 255, .1);
       border-color: rgba(91, 124, 255, .45)
+    }
+
+    .cs-panel {
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 16px;
+      overflow: hidden;
+      align-self: start;
+      background: rgba(255, 255, 255, .02)
+    }
+
+    .cs-imgs {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 64px 64px;
+      gap: 3px
+    }
+
+    .cs-imgs span {
+      position: relative;
+      padding-bottom: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.7rem;
+      background: linear-gradient(135deg, var(--c1), var(--c2))
+    }
+
+    .cs-imgs span:first-child {
+      grid-row: span 2;
+      font-size: 2.6rem
+    }
+
+    .cs-imgs em {
+      position: absolute;
+      left: 8px;
+      bottom: 6px;
+      font-style: normal;
+      font-size: .62rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, .6)
+    }
+
+    .cs-who {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px 10px
+    }
+
+    .cs-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-style: normal;
+      font-family: var(--display);
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #5B7CFF, #8B5CF6);
+      box-shadow: 0 0 0 3px rgba(91, 124, 255, .25)
+    }
+
+    .cs-who b {
+      display: block;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.12rem
+    }
+
+    .cs-who small {
+      color: var(--ink-soft);
+      font-size: .8rem
+    }
+
+    .cs-panel dl {
+      padding: 0 16px 14px;
+      display: grid;
+      gap: 7px;
+      font-size: .8rem
+    }
+
+    .cs-panel dl div {
+      display: flex;
+      gap: 10px;
+      padding-top: 7px;
+      border-top: 1px solid rgba(255, 255, 255, .06)
+    }
+
+    .cs-panel dt {
+      color: var(--ink-dim);
+      min-width: 74px
+    }
+
+    .cs-panel dd {
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .cs-panel .dot {
+      width: 7px;
+      height: 7px
     }
 
     .cs-cursor {
@@ -1220,9 +1408,39 @@
       }
     }
 
-    @media(max-width:560px) {
+    @media(max-width:700px) {
       .cs-body {
-        padding: 24px 18px 20px
+        padding: 18px 16px 18px
+      }
+
+      .cs-head {
+        gap: 12px
+      }
+
+      .cs-logo {
+        display: none
+      }
+
+      .cs-tabs {
+        margin-left: 4px;
+        gap: 16px
+      }
+
+      .cs-grid {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      .cs-panel {
+        order: -1
+      }
+
+      .cs-imgs {
+        grid-template-rows: 46px 46px
+      }
+
+      .cs-res:nth-child(3) {
+        display: none
       }
 
       .cine-cap {
@@ -1291,7 +1509,6 @@
       font-family: var(--mono);
       font-size: .74rem;
       letter-spacing: .1em;
-      text-transform: uppercase;
       color: var(--ink-soft)
     }
 
@@ -1305,6 +1522,320 @@
       height: 10px;
       border-radius: 3px;
       background: var(--grad)
+    }
+
+    /* section stepper in the top bar */
+    .tb-steps {
+      display: flex;
+      gap: 6px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      background: rgba(255, 255, 255, .02)
+    }
+
+    .tb-steps button {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 0;
+      background: none;
+      color: var(--ink-soft);
+      font-size: .82rem;
+      font-weight: 500;
+      padding: 7px 13px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background .25s, color .25s
+    }
+
+    .tb-steps button i {
+      font-style: normal;
+      font-family: var(--mono);
+      font-size: .66rem;
+      color: var(--ink-dim)
+    }
+
+    .tb-steps button:hover {
+      color: var(--ink);
+      background: rgba(255, 255, 255, .06)
+    }
+
+    .tb-steps button.seen i::after {
+      content: " ✓";
+      color: var(--green)
+    }
+
+    .tb-steps button.current {
+      background: var(--grad);
+      color: #fff
+    }
+
+    .tb-steps button.current i {
+      color: rgba(255, 255, 255, .85)
+    }
+
+    .tb-steps button.current i::after {
+      content: ""
+    }
+
+    @media(max-width:900px) {
+      .tb-steps span {
+        display: none
+      }
+
+      .tb-steps button {
+        padding: 7px 10px
+      }
+    }
+
+    /* "next up" card + explored tracker at the end of each screen */
+    .next {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: stretch
+    }
+
+    .next-card {
+      text-align: left;
+      color: var(--ink);
+      cursor: pointer;
+      border: 1px solid var(--edge);
+      border-radius: 26px;
+      padding: 28px 32px;
+      background: linear-gradient(120deg, var(--soft), rgba(18, 20, 27, .95) 65%);
+      display: grid;
+      gap: 6px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .35s var(--ease), box-shadow .3s, border-color .3s
+    }
+
+    .next-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--grad)
+    }
+
+    .next-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--a1);
+      box-shadow: 0 26px 50px -26px var(--edge)
+    }
+
+    .next-k {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--tint)
+    }
+
+    .next-t {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(1.5rem, 3.4vw, 2.2rem);
+      letter-spacing: -.02em;
+      word-spacing: .1em;
+      line-height: 1.15;
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .next-t i {
+      font-style: normal;
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      background: var(--grad);
+      color: #fff;
+      transition: transform .3s var(--ease)
+    }
+
+    .next-card:hover .next-t i {
+      transform: scale(1.1)
+    }
+
+    .next-d {
+      color: var(--ink-soft);
+      font-size: .95rem;
+      max-width: 52ch
+    }
+
+    .explored {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 22px 24px;
+      background: var(--card);
+      display: grid;
+      align-content: center;
+      gap: 14px;
+      min-width: 230px
+    }
+
+    .ex-label {
+      font-size: .88rem;
+      color: var(--ink-soft)
+    }
+
+    .ex-label b {
+      color: var(--ink);
+      font-size: 1.05rem
+    }
+
+    .ex-bar {
+      height: 6px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, .07);
+      overflow: hidden
+    }
+
+    .ex-bar span {
+      display: block;
+      height: 100%;
+      width: var(--p, 25%);
+      background: var(--grad);
+      border-radius: 6px;
+      transition: width .8s var(--ease)
+    }
+
+    .ex-dots {
+      display: flex;
+      gap: 8px
+    }
+
+    .ex-dots button {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      border: 1px solid var(--line-2);
+      background: none;
+      color: var(--ink-soft);
+      font-family: var(--mono);
+      font-size: .7rem;
+      cursor: pointer;
+      position: relative;
+      transition: border-color .2s, color .2s, background .2s
+    }
+
+    .ex-dots button:hover {
+      color: var(--ink);
+      border-color: var(--ink)
+    }
+
+    .ex-dots button.seen::after {
+      content: "✓";
+      position: absolute;
+      right: -5px;
+      top: -6px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #06260f;
+      font-size: .55rem;
+      display: grid;
+      place-items: center
+    }
+
+    .ex-dots button.current {
+      background: var(--grad);
+      color: #fff;
+      border-color: transparent
+    }
+
+    @media(max-width:760px) {
+      .next {
+        grid-template-columns: 1fr;
+        margin-top: 40px
+      }
+
+      .next-card {
+        padding: 24px 22px 24px 26px
+      }
+    }
+
+    /* shown once, after every screen has been seen */
+    .nudge {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 150;
+      width: min(360px, calc(100vw - 32px));
+      border: 1px solid var(--edge);
+      border-radius: 22px;
+      padding: 22px 22px 20px;
+      background: linear-gradient(140deg, var(--soft), #12141b 60%);
+      box-shadow: 0 30px 70px -20px rgba(0, 0, 0, .8);
+      animation: nudgeIn .6s var(--ease)
+    }
+
+    @keyframes nudgeIn {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .nudge b {
+      display: block;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.25;
+      word-spacing: .1em;
+      margin-bottom: 6px
+    }
+
+    .nudge p {
+      color: var(--ink-soft);
+      font-size: .9rem;
+      margin-bottom: 16px
+    }
+
+    .nudge .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .nudge .btn {
+      padding: 11px 20px;
+      font-size: .88rem
+    }
+
+    .nudge-x {
+      background: none;
+      border: 0;
+      color: var(--ink-soft);
+      cursor: pointer;
+      font-size: .88rem
+    }
+
+    .nudge-x:hover {
+      color: var(--ink)
+    }
+
+    @media(max-width:560px) {
+      .nudge {
+        right: 16px;
+        bottom: 16px
+      }
     }
 
     .tb-right {
@@ -1404,8 +1935,7 @@
       gap: 12px;
       font-family: var(--mono);
       font-size: .76rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
+      letter-spacing: .02em;
       color: var(--tint);
       margin-bottom: 18px
     }
@@ -1465,6 +1995,39 @@
       padding: 40px 0 90px
     }
 
+    .block.tight-top {
+      padding-top: 10px
+    }
+
+    .block.contact-direct {
+      padding: 70px 0 40px
+    }
+
+    .reach-gap {
+      margin-top: 70px
+    }
+
+    /* the display font has very narrow word spaces, so headings read as one word */
+    h1,
+    h2,
+    h3,
+    .block-title,
+    .bento-title,
+    .flagship-name,
+    .xp-role,
+    .xp-tab b,
+    .lesson b,
+    .reach b,
+    .choice b,
+    .o-t,
+    .intro-line,
+    .home-btn,
+    .cs-res b,
+    .cs-who b,
+    .proof-cell b {
+      word-spacing: .1em
+    }
+
     .block-title {
       font-family: var(--display);
       font-weight: 600;
@@ -1496,6 +2059,7 @@
 
     .reach b {
       display: block;
+      line-height: 1.2;
       font-family: var(--display);
       font-weight: 600;
       font-size: 1.5rem;
@@ -1503,6 +2067,9 @@
     }
 
     .reach span {
+      display: block;
+      margin-top: 6px;
+      line-height: 1.5;
       color: var(--ink-soft);
       font-size: .95rem
     }
@@ -1522,7 +2089,7 @@
       padding: 40px 0 46px;
       font-family: var(--mono);
       font-size: .7rem;
-      letter-spacing: .06em;
+      letter-spacing: .01em;
       color: var(--ink-dim)
     }
 
@@ -1568,6 +2135,26 @@
 
       .reach {
         padding: 26px 22px
+      }
+
+      .block {
+        padding: 20px 0 60px
+      }
+
+      .block.tight-top {
+        padding-top: 0
+      }
+
+      .block.contact-direct {
+        padding: 48px 0 20px
+      }
+
+      .reach-gap {
+        margin-top: 44px
+      }
+
+      .view-end {
+        padding: 30px 0 36px
       }
     }
 
@@ -1632,6 +2219,7 @@
     }
 
     .proof-cell b .num {
+      margin-right: .14em;
       font-variant-numeric: tabular-nums;
       background: var(--grad);
       -webkit-background-clip: text;
@@ -1640,6 +2228,9 @@
     }
 
     .proof-cell>span {
+      display: block;
+      margin-top: 8px;
+      line-height: 1.5;
       font-size: .87rem;
       color: var(--ink-soft)
     }
@@ -1781,7 +2372,7 @@
     .g-val span {
       font-family: var(--mono);
       font-size: .6rem;
-      letter-spacing: .14em;
+      letter-spacing: .02em;
       color: var(--ink-dim);
       margin-top: 5px
     }
@@ -1875,8 +2466,7 @@
     .bento-cat {
       font-family: var(--mono);
       font-size: .66rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      letter-spacing: .02em;
       color: var(--tint)
     }
 
@@ -2131,6 +2721,8 @@
 
     .flagship-name small {
       display: block;
+      word-spacing: normal;
+      line-height: 1.45;
       font-family: var(--body);
       font-weight: 500;
       font-size: .95rem;
@@ -2181,7 +2773,7 @@
       font-size: .66rem;
       color: var(--tint);
       min-width: 80px;
-      letter-spacing: .06em
+      letter-spacing: .01em
     }
 
     .term {
@@ -2233,7 +2825,6 @@
       opacity: 0;
       transform: translateX(-6px);
       transition: opacity .35s, transform .35s var(--ease);
-      white-space: pre-wrap;
       line-height: 1.9;
       color: var(--ink-soft)
     }
@@ -2360,6 +2951,7 @@
     }
 
     .card h3 {
+      line-height: 1.2;
       font-family: var(--display);
       font-weight: 600;
       font-size: 1.35rem;
@@ -2371,8 +2963,7 @@
       font-family: var(--mono);
       font-size: .66rem;
       color: var(--tint);
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      letter-spacing: .01em;
       margin-bottom: 12px
     }
 
@@ -2541,7 +3132,7 @@
     .xp-tab .when {
       font-family: var(--mono);
       font-size: .66rem;
-      letter-spacing: .08em;
+      letter-spacing: .01em;
       color: var(--ink-dim)
     }
 
@@ -2741,6 +3332,7 @@
 
     .lesson b {
       display: block;
+      line-height: 1.3;
       font-family: var(--display);
       font-weight: 600;
       font-size: 1.15rem;
@@ -2821,6 +3413,7 @@
     }
 
     .choice b {
+      line-height: 1.25;
       font-family: var(--display);
       font-weight: 600;
       font-size: 1.2rem
@@ -2862,6 +3455,7 @@
     }
 
     .intent h3 {
+      line-height: 1.2;
       font-family: var(--display);
       font-weight: 600;
       font-size: 1.6rem;
@@ -2929,7 +3523,7 @@
     .direct .k {
       font-family: var(--mono);
       font-size: .64rem;
-      letter-spacing: .12em;
+      letter-spacing: .02em;
       color: var(--ink-dim)
     }
 
@@ -3169,20 +3763,48 @@
     <div class="cine-screen" aria-hidden="true">
       <div class="cs-bar"><i></i><i></i><i></i><span>search</span></div>
       <div class="cs-body">
-        <div class="cs-logo">search<span>.</span></div>
-        <div class="cs-input"><span class="cs-icon">⌕</span><b id="csText"></b><span class="caret"></span></div>
-        <div class="cs-results">
-          <div class="cs-res hit"><small>takshil navadia · portfolio</small><b>Takshil Navadia — Software
-              Developer</b>
-            <p>Solo-built a live e-commerce platform with real payments. Open to frontend, AI/ML and product roles.
-            </p>
+        <div class="cs-head">
+          <div class="cs-logo">search<span>.</span></div>
+          <div class="cs-input"><span class="cs-icon">⌕</span><b id="csText"></b><span class="caret"></span></div>
+        </div>
+        <div class="cs-tabs"><span class="on">All</span><span>Images</span><span>Projects</span><span>News</span></div>
+        <div class="cs-grid">
+          <div class="cs-results">
+            <div class="cs-res hit">
+              <div class="cs-site"><i class="fav fav-tn">TN</i><span>Takshil Navadia<small>takshil.netlify.app</small></span></div>
+              <b>Takshil Navadia | Software Developer</b>
+              <p>Solo-built a live e-commerce platform with real payments. Open to frontend, AI/ML and product roles.</p>
+              <div class="cs-links"><span>About me</span><span>Projects</span><span>Experience</span><span>Contact</span></div>
+            </div>
+            <div class="cs-res">
+              <div class="cs-site"><i class="fav">GH</i><span>GitHub<small>github.com › Takshil23</small></span></div>
+              <b>Takshil23 on GitHub</b>
+              <p>Richierich, FamJam, OmniQuery and more. Code for live apps and client builds.</p>
+            </div>
+            <div class="cs-res">
+              <div class="cs-site"><i class="fav fav-in">in</i><span>LinkedIn<small>linkedin.com › in › takshil-navadia</small></span></div>
+              <b>Takshil Navadia on LinkedIn</b>
+              <p>Software Developer · Ahmedabad, India · B.Tech CSE (AI/ML)</p>
+            </div>
           </div>
-          <div class="cs-res"><small>github.com › Takshil23</small><b>Takshil23 · GitHub</b>
-            <p>Richierich, FamJam, OmniQuery and more.</p>
-          </div>
-          <div class="cs-res"><small>linkedin.com › in › takshil-navadia</small><b>Takshil Navadia · LinkedIn</b>
-            <p>Software Developer · Ahmedabad, India</p>
-          </div>
+          <aside class="cs-panel">
+            <div class="cs-imgs">
+              <span style="--c1:#1f2937;--c2:#7C2D12">👔<em>Richierich</em></span>
+              <span style="--c1:#059669;--c2:#0F766E">💸<em>FamJam</em></span>
+              <span style="--c1:#2563EB;--c2:#6D28D9">🤖<em>OmniQuery</em></span>
+              <span style="--c1:#B45309;--c2:#7C2D12">👑<em>Crest &amp; Crown</em></span>
+              <span style="--c1:#EA580C;--c2:#BE123C">🍽️<em>Sales tracker</em></span>
+            </div>
+            <div class="cs-who"><i class="cs-avatar">TN</i>
+              <div><b>Takshil Navadia</b><small>Software Developer</small></div>
+            </div>
+            <dl>
+              <div><dt>Based in</dt><dd>Ahmedabad, India</dd></div>
+              <div><dt>Education</dt><dd>B.Tech CSE (AI/ML), GTU</dd></div>
+              <div><dt>Known for</dt><dd>Richierich, FamJam, OmniQuery</dd></div>
+              <div><dt>Status</dt><dd><span class="dot"></span>Open to work</dd></div>
+            </dl>
+          </aside>
         </div>
         <div class="cs-cursor" id="csCursor"><svg viewBox="0 0 24 24">
             <path d="M3,2 L3,19 L8,14.5 L11.5,22 L14.5,20.6 L11,13.4 L18,13.4 Z" fill="#fff" stroke="#111"
@@ -3196,14 +3818,14 @@
   </div>
 
   <!-- ================= START SCREEN ================= -->
-  <div id="intro" role="dialog" aria-modal="true" aria-label="Welcome — Takshil Navadia">
+  <div id="intro" role="dialog" aria-modal="true" aria-label="Welcome to the portfolio of Takshil Navadia">
     <canvas id="introCanvas" aria-hidden="true"></canvas>
     <div class="intro-glow" aria-hidden="true"></div>
 
     <div class="intro-top">
       <span class="mark" aria-hidden="true">TN</span>
       <div class="intro-top-right">
-        <span class="pill time"><span aria-hidden="true">🕓</span> <span data-time>—</span> in Ahmedabad</span>
+        <span class="pill time"><span aria-hidden="true">🕓</span> <span data-time></span> in Ahmedabad</span>
         <span class="pill"><span class="dot"></span> Available for work</span>
         <button class="pill resume" id="resumeBtn" type="button" hidden>← Back</button>
       </div>
@@ -3219,34 +3841,34 @@
         <span>Software Developer</span><span>AI / ML</span><span>Full-stack</span><span>Ahmedabad, India</span>
       </div>
 
-      <p class="intro-line iseq" style="--t:150ms">I'm looking for my next <b>tech role</b> — and I can help
+      <p class="intro-line iseq" style="--t:150ms">I'm looking for my next <b>tech role</b>, and I can help
         <b>your company build</b> real products that ship.</p>
 
-      <p class="intro-ask iseq" style="--t:350ms">// where would you like to start?</p>
+      <p class="intro-ask iseq" style="--t:350ms">Where would you like to start?</p>
       <div class="intro-options iseq" style="--t:450ms">
         <button class="opt t-about" type="button" data-go="about" data-from="top">
           <span class="o-head"><span class="o-ico">👋</span><span class="o-badge">01 · Start here</span></span>
           <span class="o-t">About me <i>↓</i></span>
           <span class="o-d">Who I am, education &amp; what I've shipped</span>
-          <span class="o-meta">B.TECH AI/ML · 3 LIVE PLATFORMS</span>
+          <span class="o-meta">B.Tech AI/ML · 3 live platforms</span>
         </button>
         <button class="opt t-projects" type="button" data-go="projects" data-from="left">
           <span class="o-head"><span class="o-ico">🚀</span><span class="o-n">02</span></span>
           <span class="o-t">Projects <i>→</i></span>
           <span class="o-d">Live apps &amp; client builds</span>
-          <span class="o-meta">6 BUILDS · 3 LIVE · FILTERABLE</span>
+          <span class="o-meta">6 builds · 3 live</span>
         </button>
         <button class="opt t-experience" type="button" data-go="experience" data-from="bottom">
           <span class="o-head"><span class="o-ico">🧭</span><span class="o-n">03</span></span>
           <span class="o-t">Experience <i>↑</i></span>
           <span class="o-d">Internship + 3 years of work</span>
-          <span class="o-meta">5 ROLES · SINCE 2022</span>
+          <span class="o-meta">5 roles since 2022</span>
         </button>
         <button class="opt t-contact" type="button" data-go="contact" data-from="right">
           <span class="o-head"><span class="o-ico">✉️</span><span class="o-n">04</span></span>
           <span class="o-t">Contact <i>←</i></span>
           <span class="o-d">Hire me or start a project</span>
-          <span class="o-meta">READY-MADE EMAIL IN 1 CLICK</span>
+          <span class="o-meta">Ready-made email in one click</span>
         </button>
       </div>
 
@@ -3263,9 +3885,13 @@
   <!-- ================= TOP BAR (shown inside a screen) ================= -->
   <header class="topbar" id="topbar">
     <button class="tb-back" type="button" data-home>← Start</button>
-    <div class="tb-crumb"><i></i><span id="tbNum">01</span> / <b id="tbName">About me</b></div>
+    <nav class="tb-steps" aria-label="Sections">
+      <button type="button" class="t-about" data-step-go="about"><i>01</i><span>About me</span></button>
+      <button type="button" class="t-projects" data-step-go="projects"><i>02</i><span>Projects</span></button>
+      <button type="button" class="t-experience" data-step-go="experience"><i>03</i><span>Experience</span></button>
+      <button type="button" class="t-contact" data-step-go="contact"><i>04</i><span>Contact</span></button>
+    </nav>
     <div class="tb-right">
-      <span class="pill"><span class="dot"></span> Available</span>
       <span class="mark tb-mark" aria-hidden="true">TN</span>
     </div>
     <div class="progress" id="progress"></div>
@@ -3285,34 +3911,34 @@
             roles</div>
           <h1 class="reveal" data-split style="--base:150ms">Most freshers show projects. <em>I ship products.</em>
           </h1>
-          <p class="lead reveal" style="--d:500ms">I'm <strong>Takshil Navadia</strong> — a B.Tech CSE (AI/ML)
+          <p class="lead reveal" style="--d:500ms">I'm <strong>Takshil Navadia</strong>, a B.Tech CSE (AI/ML)
             graduate from Ahmedabad. While studying, I solo-built and launched <strong>Richierich</strong>, a live
-            e-commerce platform handling real payments on a custom domain — storefront, backend, payment gateway,
-            security, and brand, all built by one person: me.</p>
+            e-commerce platform handling real payments on a custom domain. Storefront, backend, payment gateway,
+            security and brand, all built by one person: me.</p>
           <div class="hero-proof reveal" style="--d:700ms">
             <div class="proof-cell"><b><span class="num" data-count="3">0</span> live platforms</b><span>E-commerce
                 with real payments, finance app, restaurant order system</span></div>
-            <div class="proof-cell"><b><span class="num" data-count="6">0</span> projects</b><span>Built end-to-end
-                — including paid client work</span></div>
+            <div class="proof-cell"><b><span class="num" data-count="6">0</span> projects</b><span>Built end to end,
+                including paid client work</span></div>
             <div class="proof-cell"><b><span class="num" data-count="3">0</span>+ years</b><span>Professional
                 experience in US healthcare operations</span></div>
           </div>
         </header>
 
-        <div class="block" style="padding-top:10px">
-          <p class="eyebrow reveal"><span class="n">edu</span> education</p>
+        <div class="block tight-top">
+          <p class="eyebrow reveal">Education</p>
           <h2 class="block-title reveal">From diploma to B.Tech in AI/ML</h2>
           <p class="block-sub reveal">Six years of computer engineering, one step at a time.</p>
           <div class="edu">
             <article class="edu-card reveal">
-              <div class="edu-top"><span class="edu-step">STEP 1</span><span class="edu-years">2020 — 2023</span>
+              <div class="edu-top"><span class="edu-step">Step 1</span><span class="edu-years">2020 to 2023</span>
               </div>
               <div class="edu-main">
                 <div>
                   <h3>Diploma in Computer Engineering</h3>
                   <p class="edu-school">Gyanmanjari Institute of Technology · Gujarat Technological University
                     (GTU)</p>
-                  <span class="tag">COMPLETED 2023</span>
+                  <span class="tag">Completed 2023</span>
                 </div>
                 <div class="gauge" style="--off:87.2" role="img" aria-label="CGPA 7.33 out of 10">
                   <svg viewBox="0 0 120 120" aria-hidden="true">
@@ -3331,14 +3957,14 @@
             </article>
             <div class="edu-link" aria-hidden="true"><span>→</span></div>
             <article class="edu-card highlight reveal" style="--d:200ms">
-              <div class="edu-top"><span class="edu-step">STEP 2</span><span class="edu-years">2023 — 2026</span>
+              <div class="edu-top"><span class="edu-step">Step 2</span><span class="edu-years">2023 to 2026</span>
               </div>
               <div class="edu-main">
                 <div>
-                  <h3>B.Tech — Computer Science &amp; Engineering (AI/ML)</h3>
+                  <h3>B.Tech in Computer Science &amp; Engineering (AI/ML)</h3>
                   <p class="edu-school">New LJ Institute of Technology, Ahmedabad · Gujarat Technological University
                     (GTU)</p>
-                  <span class="tag live"><span class="dot"></span>COMPLETED 2026</span>
+                  <span class="tag live"><span class="dot"></span>Completed 2026</span>
                 </div>
                 <div class="gauge" style="--off:80.4" role="img" aria-label="CGPA 7.54 out of 10">
                   <svg viewBox="0 0 120 120" aria-hidden="true">
@@ -3359,59 +3985,59 @@
         </div>
 
         <div class="block">
-          <p class="eyebrow reveal"><span class="n">log</span> things I shipped</p>
+          <p class="eyebrow reveal">Things I shipped</p>
           <h2 class="block-title reveal">Not tutorials. Not clones.</h2>
-          <p class="block-sub reveal">Real features, deployed for real users — here's a running log.</p>
+          <p class="block-sub reveal">Real features, deployed for real users. Here's a running log.</p>
           <div class="bento" data-stagger>
             <div class="bento-card wide reveal">
               <div class="bento-icon">🚀</div>
-              <span class="bento-cat">LIVE — richierich storefront</span>
+              <span class="bento-cat">Richierich storefront</span>
               <p class="bento-title">Launched a full e-commerce platform, solo</p>
-              <p class="bento-desc">Product pages, cart, checkout, order flow — HTML/CSS/JS storefront on a custom
+              <p class="bento-desc">Product pages, cart, checkout and order flow. An HTML/CSS/JS storefront on a custom
                 Hostinger domain with SSL and Cloudflare CDN. Real customers, real inventory, real brand.</p>
-              <span class="bento-badge"><span class="dot"></span> LIVE IN PRODUCTION</span>
+              <span class="bento-badge"><span class="dot"></span> Live in production</span>
             </div>
             <div class="bento-card reveal">
               <div class="bento-icon">💳</div>
-              <span class="bento-cat">payments</span>
+              <span class="bento-cat">Payments</span>
               <p class="bento-title">Integrated Razorpay for live transactions</p>
-              <p class="bento-desc">Real money, real orders — with webhook verification so payment status can't be
+              <p class="bento-desc">Real money and real orders, with webhook verification so payment status can't be
                 spoofed.</p>
             </div>
             <div class="bento-card reveal">
               <div class="bento-icon">🛡️</div>
-              <span class="bento-cat">security</span>
+              <span class="bento-cat">Security</span>
               <p class="bento-title">Built a security layer most freshers never touch</p>
               <p class="bento-desc">Firestore atomic transactions for no-overselling, Firebase App Check, and
                 Cloudflare WAF in front of everything.</p>
             </div>
             <div class="bento-card reveal">
               <div class="bento-icon">🔐</div>
-              <span class="bento-cat">auth</span>
+              <span class="bento-cat">Authentication</span>
               <p class="bento-title">Solved Firebase Phone Auth billing with zero cost</p>
-              <p class="bento-desc">Migrated to an EmailJS-based OTP flow — same UX, zero billing constraints.</p>
+              <p class="bento-desc">Migrated to an EmailJS-based OTP flow: same UX, zero billing constraints.</p>
             </div>
             <div class="bento-card reveal">
               <div class="bento-icon">🔄</div>
-              <span class="bento-cat">famjam</span>
+              <span class="bento-cat">FamJam</span>
               <p class="bento-title">Migrated a live app from localStorage to Firestore</p>
               <p class="bento-desc">Zero data loss migration for existing users + multi-currency support and
                 multi-tab session sync.</p>
             </div>
             <div class="bento-card reveal">
               <div class="bento-icon">🎥</div>
-              <span class="bento-cat">internship</span>
+              <span class="bento-cat">Internship</span>
               <p class="bento-title">Automated educational video generation</p>
-              <p class="bento-desc">At Reasonify — Python + Manim pipeline integrating APIs for narration,
-                rendering, and audio-video sync.</p>
+              <p class="bento-desc">At Reasonify: a Python and Manim pipeline integrating APIs for narration,
+                rendering and audio-video sync.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="block" style="padding-top:10px">
+      <div class="block tight-top">
         <div class="wrap">
-          <p class="eyebrow reveal"><span class="n">kit</span> toolkit</p>
+          <p class="eyebrow reveal">Toolkit</p>
           <h2 class="block-title reveal" style="margin-bottom:26px">What I work with</h2>
         </div>
         <div class="marquee reveal" aria-hidden="true">
@@ -3430,7 +4056,7 @@
                 <li>HTML, CSS, JavaScript</li>
                 <li>Firebase &amp; Firestore</li>
                 <li>Supabase (Postgres backend)</li>
-                <li>Claude API — AI features &amp; integrations</li>
+                <li>Claude API for AI features &amp; integrations</li>
                 <li>Python &amp; Manim</li>
                 <li>Razorpay integration</li>
                 <li>SQL &amp; data handling</li>
@@ -3453,7 +4079,7 @@
               <ul>
                 <li>Brand identity &amp; design systems</li>
                 <li>Client communication (3+ yrs)</li>
-                <li>Quick learner — new tech in days, not weeks</li>
+                <li>Quick learner: new tech in days, not weeks</li>
                 <li>Attention to detail &amp; data accuracy</li>
                 <li>Prioritization under deadlines</li>
                 <li>Analytical &amp; data interpretation</li>
@@ -3467,7 +4093,7 @@
 
       <div class="wrap">
         <div class="reach reveal">
-          <div><b>Like what you see?</b><span>Drop me a line — I usually reply within a day.</span></div>
+          <div><b>Like what you see?</b><span>Drop me a line. I usually reply within a day.</span></div>
           <div class="reach-actions">
             <a class="btn btn-primary" href="mailto:takshilnavadia1245@gmail.com">Email me <span
                 class="arr">→</span></a>
@@ -3475,9 +4101,26 @@
               rel="noopener">LinkedIn ↗</a>
           </div>
         </div>
+        <div class="next reveal">
+          <button class="next-card t-projects" type="button" data-step-go="projects">
+            <span class="next-k">Next up · 02</span>
+            <span class="next-t">See what I've built <i>→</i></span>
+            <span class="next-d">Richierich, FamJam, OmniQuery and three more, with live links you can try.</span>
+          </button>
+          <div class="explored">
+            <span class="ex-label">You've explored <b data-ex-count>1</b> of 4</span>
+            <div class="ex-bar"><span></span></div>
+            <div class="ex-dots">
+              <button type="button" data-step-go="about" aria-label="About me">01</button>
+              <button type="button" data-step-go="projects" aria-label="Projects">02</button>
+              <button type="button" data-step-go="experience" aria-label="Experience">03</button>
+              <button type="button" data-step-go="contact" aria-label="Contact">04</button>
+            </div>
+          </div>
+        </div>
         <div class="view-end">
           <button class="home-btn" type="button" data-home><i>←</i> Back to start</button>
-          <span>© 2026 TAKSHIL NAVADIA · DESIGNED &amp; BUILT BY ME</span>
+          <span>© 2026 Takshil Navadia · Designed and built by me</span>
         </div>
       </div>
     </section>
@@ -3489,9 +4132,9 @@
       <div class="view-num" aria-hidden="true">02</div>
       <div class="wrap">
         <div class="view-head">
-          <p class="eyebrow reveal"><span class="n">02</span> projects</p>
+          <p class="eyebrow reveal"><span class="n">02</span> Projects</p>
           <h1 class="reveal" data-split>Things people <em>actually use.</em></h1>
-          <p class="lead reveal" style="--d:300ms">Client builds, live apps and AI experiments — each one solving a
+          <p class="lead reveal" style="--d:300ms">Client builds, live apps and AI experiments, each one solving a
             real problem. Filter to see what you care about.</p>
           <div class="filters reveal" style="--d:450ms" role="group" aria-label="Filter projects">
             <button class="filter active" type="button" data-f="all" aria-pressed="true">All <i>6</i></button>
@@ -3505,40 +4148,39 @@
           <div class="flagship reveal">
             <div class="flagship-head">
               <div class="flagship-name">richierich<small>Flagship · Premium menswear e-commerce</small></div>
-              <div class="tags"><span class="tag live"><span class="dot"></span>LIVE</span><span class="tag">SOLO
-                  BUILD</span></div>
+              <div class="tags"><span class="tag live"><span class="dot"></span>Live</span><span class="tag">Solo build</span></div>
             </div>
             <div class="flagship-body">
               <div>
-                <p>A premium menswear platform for a real clothing startup — every layer built by one person. Most
+                <p>A premium menswear platform for a real clothing startup, with every layer built by one person. Most
                   e-commerce demos stop at the cart. Richierich goes all the way: <strong>real inventory, real
-                    payments, real customers</strong> — plus fraud protection, atomic stock management, and a staged
+                    payments, real customers</strong>, plus fraud protection, atomic stock management, and a staged
                   fulfillment pipeline in the admin panel.</p>
-                <p>I also own the brand side — logo, brand documents, and a "quiet luxury" design language. Currently
+                <p>I also own the brand side: logo, brand documents and a "quiet luxury" design language. Currently
                   building a <strong>Style Concierge</strong> and natural-language product search through serverless
                   functions.</p>
                 <p style="margin-bottom:0"><strong>Next:</strong> expanding delivery to the US and Canada.</p>
                 <ul class="build-list">
-                  <li><span class="k">FRONTEND</span> HTML / CSS / JavaScript storefront, editorial design system</li>
-                  <li><span class="k">BACKEND</span> Firebase Firestore — real-time, transaction-safe stock</li>
-                  <li><span class="k">PAYMENTS</span> Razorpay gateway + webhook verification</li>
-                  <li><span class="k">SECURITY</span> App Check, Cloudflare WAF, atomic transactions</li>
-                  <li><span class="k">INFRA</span> Custom domain, SSL, Cloudflare CDN, Netlify Functions</li>
+                  <li><span class="k">Frontend</span> HTML / CSS / JavaScript storefront, editorial design system</li>
+                  <li><span class="k">Backend</span> Firebase Firestore with real-time, transaction-safe stock</li>
+                  <li><span class="k">Payments</span> Razorpay gateway + webhook verification</li>
+                  <li><span class="k">Security</span> App Check, Cloudflare WAF, atomic transactions</li>
+                  <li><span class="k">Infra</span> Custom domain, SSL, Cloudflare CDN, Netlify Functions</li>
                   <li><span class="k">AI</span> Style Concierge + natural-language search (in build)</li>
                 </ul>
               </div>
               <div class="term" id="term" aria-label="Build log for Richierich">
-                <div class="term-bar"><i></i><i></i><i></i><span>~/richierich — deploy</span></div>
+                <div class="term-bar"><i></i><i></i><i></i><span>~/richierich</span></div>
                 <div class="term-body">
                   <div class="term-line"><span class="p">$</span> <span class="c">ship richierich --prod</span></div>
                   <div class="term-line"><span class="ok">✓</span> storefront built <span class="y">html · css ·
                       js</span></div>
-                  <div class="term-line"><span class="ok">✓</span> firestore connected — atomic stock on</div>
-                  <div class="term-line"><span class="ok">✓</span> razorpay live — webhooks verified</div>
+                  <div class="term-line"><span class="ok">✓</span> firestore connected, atomic stock on</div>
+                  <div class="term-line"><span class="ok">✓</span> razorpay live, webhooks verified</div>
                   <div class="term-line"><span class="ok">✓</span> app check enabled</div>
                   <div class="term-line"><span class="ok">✓</span> cloudflare cdn + waf active</div>
                   <div class="term-line"><span class="ok">✓</span> custom domain + ssl</div>
-                  <div class="term-line"><span class="y">…</span> style concierge (ai) — in build</div>
+                  <div class="term-line"><span class="y">…</span> style concierge (ai) in build</div>
                   <div class="term-line"><span class="ok">●</span> <span class="c">live in production. real
                       orders.</span></div>
                   <div class="term-line"><span class="p">$</span> <span class="caret"></span></div>
@@ -3551,12 +4193,12 @@
         <div class="grid" data-stagger>
           <div class="pitem" data-tags="client">
             <article class="card tilt reveal">
-              <div class="cover" style="--c1:#B45309;--c2:#7C2D12"><span class="tag">CLIENT</span><span
+              <div class="cover" style="--c1:#B45309;--c2:#7C2D12"><span class="tag">Client</span><span
                   class="cover-emoji" aria-hidden="true">👑</span></div>
               <div class="card-body">
                 <h3>Crest &amp; Crown Creation</h3>
                 <p class="sub">Hybrid retail + wholesale</p>
-                <p>A premium ethnic wear platform built for a real client — one site, two businesses. Retail customers
+                <p>A premium ethnic wear platform built for a real client: one site, two businesses. Retail customers
                   buy single pieces through a B2C storefront, while wholesale buyers get a dedicated B2B portal with
                   bulk ordering.</p>
                 <div class="stack"><span class="chip">B2C + B2B</span><span class="chip">Wholesale portal</span><span
@@ -3567,7 +4209,7 @@
           <div class="pitem" data-tags="live">
             <article class="card tilt reveal">
               <div class="cover" style="--c1:#059669;--c2:#0F766E"><span class="tag live"><span
-                    class="dot"></span>LIVE</span><span class="cover-emoji" aria-hidden="true">💸</span></div>
+                    class="dot"></span>Live</span><span class="cover-emoji" aria-hidden="true">💸</span></div>
               <div class="card-body">
                 <h3>FamJam</h3>
                 <p class="sub">Family finance &amp; budgeting</p>
@@ -3586,13 +4228,13 @@
           <div class="pitem" data-tags="live client">
             <article class="card tilt reveal">
               <div class="cover" style="--c1:#EA580C;--c2:#BE123C"><span class="tag live"><span
-                    class="dot"></span>LIVE · CLIENT</span><span class="cover-emoji" aria-hidden="true">🍽️</span>
+                    class="dot"></span>Live · Client</span><span class="cover-emoji" aria-hidden="true">🍽️</span>
               </div>
               <div class="card-body">
                 <h3>Restaurant Sales Tracker</h3>
                 <p class="sub">Built for a real restaurant owner</p>
                 <p>Replaced manual record-keeping with instant order entry, payment status (cash/online), delivery
-                  tracking, daily revenue summaries, and Excel export. Small tool, real impact — in daily use.</p>
+                  tracking, daily revenue summaries, and Excel export. Small tool, real impact, in daily use.</p>
                 <div class="stack"><span class="chip">JavaScript</span><span class="chip">Excel export</span></div>
                 <div class="links">
                   <a class="repo live-link" href="https://swarnimorder.netlify.app/" target="_blank"
@@ -3603,13 +4245,13 @@
           </div>
           <div class="pitem" data-tags="ai">
             <article class="card tilt reveal">
-              <div class="cover" style="--c1:#2563EB;--c2:#6D28D9"><span class="tag">AI · SAAS</span><span
+              <div class="cover" style="--c1:#2563EB;--c2:#6D28D9"><span class="tag">AI · SaaS</span><span
                   class="cover-emoji" aria-hidden="true">🤖</span></div>
               <div class="card-body">
                 <h3>OmniQuery</h3>
                 <p class="sub">AI-powered chat platform</p>
-                <p>Real-time chat with specialized AI agents — general queries, math problem-solving, and PDF/document
-                  processing powered by GROBID, on a multi-LLM architecture so the right model handles the right
+                <p>Real-time chat with specialized AI agents for general queries, math problem-solving and PDF/document
+                  processing powered by GROBID. Built on a multi-LLM architecture so the right model handles the right
                   task.</p>
                 <div class="stack"><span class="chip">Multi-LLM</span><span class="chip">GROBID</span><span
                     class="chip">Real-time</span></div>
@@ -3637,7 +4279,7 @@
           <div class="pitem" data-tags="always">
             <article class="card card-gh tilt reveal">
               <h3>More on GitHub</h3>
-              <p>The code behind these projects — plus whatever I'm building this week. I ship fast and push often.
+              <p>The code behind these projects, plus whatever I'm building this week. I ship fast and push often.
               </p>
               <a class="btn" href="https://github.com/Takshil23" target="_blank" rel="noopener">github.com/Takshil23
                 <span class="arr">→</span></a>
@@ -3645,9 +4287,9 @@
           </div>
         </div>
 
-        <div class="reach reveal" style="margin-top:70px">
-          <div><b>Need something like this built?</b><span>Stores, web apps, dashboards, AI features — let's
-              talk.</span></div>
+        <div class="reach reveal reach-gap">
+          <div><b>Need something like this built?</b><span>Stores, web apps, dashboards and AI features.
+              Let's talk.</span></div>
           <div class="reach-actions">
             <a class="btn btn-primary"
               href="mailto:takshilnavadia1245@gmail.com?subject=Project%20enquiry%20from%20your%20portfolio">Email me
@@ -3656,9 +4298,26 @@
               rel="noopener">LinkedIn ↗</a>
           </div>
         </div>
+        <div class="next reveal">
+          <button class="next-card t-experience" type="button" data-step-go="experience">
+            <span class="next-k">Next up · 03</span>
+            <span class="next-t">See where I've worked <i>↑</i></span>
+            <span class="next-d">An AI internship and three years in US healthcare operations.</span>
+          </button>
+          <div class="explored">
+            <span class="ex-label">You've explored <b data-ex-count>1</b> of 4</span>
+            <div class="ex-bar"><span></span></div>
+            <div class="ex-dots">
+              <button type="button" data-step-go="about" aria-label="About me">01</button>
+              <button type="button" data-step-go="projects" aria-label="Projects">02</button>
+              <button type="button" data-step-go="experience" aria-label="Experience">03</button>
+              <button type="button" data-step-go="contact" aria-label="Contact">04</button>
+            </div>
+          </div>
+        </div>
         <div class="view-end">
           <button class="home-btn" type="button" data-home><i>←</i> Back to start</button>
-          <span>© 2026 TAKSHIL NAVADIA · DESIGNED &amp; BUILT BY ME</span>
+          <span>© 2026 Takshil Navadia · Designed and built by me</span>
         </div>
       </div>
     </section>
@@ -3670,42 +4329,42 @@
       <div class="view-num" aria-hidden="true">03</div>
       <div class="wrap">
         <div class="view-head">
-          <p class="eyebrow reveal"><span class="n">03</span> experience</p>
+          <p class="eyebrow reveal"><span class="n">03</span> Experience</p>
           <h1 class="reveal" data-split>Where I've <em>worked.</em></h1>
           <p class="lead reveal" style="--d:300ms">Three years in US healthcare operations taught me what most fresh
             developers lack: accuracy under pressure, client communication, and shipping on deadlines. Pick a role to
             see the details.</p>
-          <div class="xp-stats reveal" style="--d:450ms"><span>5 roles</span><span>since 2022</span><span>1 AI
-              internship</span><span>3+ yrs US healthcare</span></div>
+          <div class="xp-stats reveal" style="--d:450ms"><span>5 roles</span><span>Since 2022</span><span>1 AI
+              internship</span><span>3+ years in US healthcare</span></div>
         </div>
 
         <div class="xp-wrap reveal">
           <div class="xp-list" role="tablist" aria-label="Roles" aria-orientation="vertical">
             <button class="xp-tab active" role="tab" id="xt0" aria-controls="xp0" aria-selected="true"
-              type="button"><span class="when">JAN — MAY 2026</span><b>AI &amp; Software Developer
+              type="button"><span class="when">Jan to May 2026</span><b>AI &amp; Software Developer
                 Intern</b><small>Reasonify Pvt. Ltd.</small></button>
             <button class="xp-tab" role="tab" id="xt1" aria-controls="xp1" aria-selected="false" tabindex="-1"
-              type="button"><span class="now">NOW</span><span class="when">OCT 2025 — PRESENT</span><b>AR
+              type="button"><span class="now">Now</span><span class="when">Oct 2025 to present</span><b>AR
                 Executive</b><small>Evrostos Healthcare Solutions</small></button>
             <button class="xp-tab" role="tab" id="xt2" aria-controls="xp2" aria-selected="false" tabindex="-1"
-              type="button"><span class="when">AUG 2024 — OCT 2025</span><b>Process Associate</b><small>Integrity
+              type="button"><span class="when">Aug 2024 to Oct 2025</span><b>Process Associate</b><small>Integrity
                 Healthcare Solutions</small></button>
             <button class="xp-tab" role="tab" id="xt3" aria-controls="xp3" aria-selected="false" tabindex="-1"
-              type="button"><span class="when">MAR 2023 — JUL 2024</span><b>Customer Service
+              type="button"><span class="when">Mar 2023 to Jul 2024</span><b>Customer Service
                 Representative</b><small>Nostrum Healthcare</small></button>
             <button class="xp-tab" role="tab" id="xt4" aria-controls="xp4" aria-selected="false" tabindex="-1"
-              type="button"><span class="when">AUG 2022 — FEB 2023</span><b>Sales
+              type="button"><span class="when">Aug 2022 to Feb 2023</span><b>Sales
                 Executive</b><small>RUNR</small></button>
           </div>
 
           <div>
             <article class="xp-panel" role="tabpanel" id="xp0" aria-labelledby="xt0" data-year="2026">
-              <span class="xp-when">JAN 2026 — MAY 2026 · INTERNSHIP</span>
+              <span class="xp-when">Jan 2026 to May 2026 · Internship</span>
               <p class="xp-role">AI &amp; Software Developer Intern</p>
               <p class="xp-org"><a href="https://singularity-learn.com/" target="_blank" rel="noopener">Reasonify Pvt.
                   Ltd. ↗</a> · Gujarat</p>
-              <p class="xp-desc">Building AI-driven educational video solutions for school students — where code meets
-                classroom.</p>
+              <p class="xp-desc">Building AI-driven educational video solutions for school students, where code meets
+                the classroom.</p>
               <ul class="xp-bullets">
                 <li>Created animated mathematics and concept-based learning videos using <strong>Manim</strong>,
                   Python's mathematical animation library.</li>
@@ -3718,11 +4377,11 @@
                   integration</span><span class="chip">Automation</span></div>
             </article>
             <article class="xp-panel" role="tabpanel" id="xp1" aria-labelledby="xt1" data-year="2025" hidden>
-              <span class="xp-when">OCT 2025 — PRESENT</span>
+              <span class="xp-when">Oct 2025 to present</span>
               <p class="xp-role">AR Executive</p>
               <p class="xp-org"><a href="https://evrostoshealth.com/" target="_blank" rel="noopener">Evrostos
                   Healthcare Solutions ↗</a> · Gujarat</p>
-              <p class="xp-desc">US healthcare revenue cycle — where a single wrong data point delays a real claim.</p>
+              <p class="xp-desc">US healthcare revenue cycle, where a single wrong data point delays a real claim.</p>
               <ul class="xp-bullets">
                 <li>Cleared <strong>large backlog datasets</strong> by sorting, validating, and updating entries with
                   high accuracy.</li>
@@ -3736,16 +4395,16 @@
                   validation</span><span class="chip">PIP / WC insurance</span></div>
             </article>
             <article class="xp-panel" role="tabpanel" id="xp2" aria-labelledby="xt2" data-year="2024" hidden>
-              <span class="xp-when">AUG 2024 — OCT 2025 · 14 MONTHS</span>
+              <span class="xp-when">Aug 2024 to Oct 2025 · 14 months</span>
               <p class="xp-role">Process Associate</p>
               <p class="xp-org"><a href="https://mbsrcm.com/" target="_blank" rel="noopener">Integrity Healthcare
                   Solutions ↗</a> · Gujarat</p>
-              <p class="xp-desc">14 months of claim review — precision work at scale.</p>
+              <p class="xp-desc">14 months of claim review: precision work at scale.</p>
               <ul class="xp-bullets">
                 <li>Supported healthcare claim review by verifying and updating key data points.</li>
                 <li>Maintained <strong>organized documentation</strong> for daily operations and internal processes.
                 </li>
-                <li>Flagged data errors and contributed fixes to small workflow gaps — process-improvement thinking,
+                <li>Flagged data errors and contributed fixes to small workflow gaps: process-improvement thinking,
                   not just task execution.</li>
                 <li>Prepared daily reports for management while consistently hitting deadlines.</li>
               </ul>
@@ -3753,11 +4412,11 @@
                   class="chip">Process improvement</span></div>
             </article>
             <article class="xp-panel" role="tabpanel" id="xp3" aria-labelledby="xt3" data-year="2023" hidden>
-              <span class="xp-when">MAR 2023 — JUL 2024 · 17 MONTHS</span>
+              <span class="xp-when">Mar 2023 to Jul 2024 · 17 months</span>
               <p class="xp-role">Customer Service Representative</p>
               <p class="xp-org"><a href="https://in.linkedin.com/company/nostrum-healthcare-llp" target="_blank"
                   rel="noopener">Nostrum Healthcare ↗</a> · Gujarat</p>
-              <p class="xp-desc">17 months on inbound US customer calls — communication under pressure, every single
+              <p class="xp-desc">17 months on inbound US customer calls: communication under pressure, every single
                 day.</p>
               <ul class="xp-bullets">
                 <li>Handled inbound calls and checked service status through internal systems in real time.</li>
@@ -3771,10 +4430,10 @@
                   resolution</span><span class="chip">US customers</span></div>
             </article>
             <article class="xp-panel" role="tabpanel" id="xp4" aria-labelledby="xt4" data-year="2022" hidden>
-              <span class="xp-when">AUG 2022 — FEB 2023</span>
+              <span class="xp-when">Aug 2022 to Feb 2023</span>
               <p class="xp-role">Sales Executive</p>
               <p class="xp-org"><a href="https://runr.in/" target="_blank" rel="noopener">RUNR ↗</a> · Gujarat</p>
-              <p class="xp-desc">My first taste of business development — selling digital visibility to local stores.
+              <p class="xp-desc">My first taste of business development: selling digital visibility to local stores.
               </p>
               <ul class="xp-bullets">
                 <li>Approached local store owners and pitched <strong>Instagram-based promotion</strong> for their
@@ -3793,25 +4452,25 @@
           </div>
         </div>
 
-        <div class="block" style="padding-bottom:70px">
-          <p class="eyebrow reveal"><span class="n">why</span> what it gave me</p>
-          <h2 class="block-title reveal" style="margin-bottom:28px">What non-tech work taught this developer</h2>
+        <div class="block">
+          <p class="eyebrow reveal">What it gave me</p>
+          <h2 class="block-title reveal" style="margin-bottom:28px">What my non-tech work taught me</h2>
           <div class="lessons" data-stagger>
             <div class="lesson reveal"><span>🎯</span><b>Accuracy under pressure</b>
               <p>In US claims, one wrong field delays a real payment. I bring the same care to production code.</p>
             </div>
             <div class="lesson reveal"><span>🗣️</span><b>Client communication</b>
-              <p>Over a year of daily calls with US customers — I can explain technical things clearly to
+              <p>Over a year of daily calls with US customers taught me to explain technical things clearly to
                 non-technical people.</p>
             </div>
             <div class="lesson reveal"><span>⏱️</span><b>Shipping on deadlines</b>
-              <p>Daily reports, backlog targets and weekly summaries — I'm used to delivering on time.</p>
+              <p>Daily reports, backlog targets and weekly summaries. I'm used to delivering on time.</p>
             </div>
           </div>
         </div>
 
         <div class="reach reveal">
-          <div><b>Hiring for a role?</b><span>Frontend, AI/ML or product — I'd love to hear about it.</span></div>
+          <div><b>Hiring for a role?</b><span>Frontend, AI/ML or product roles. I'd love to hear about it.</span></div>
           <div class="reach-actions">
             <a class="btn btn-primary"
               href="mailto:takshilnavadia1245@gmail.com?subject=Role%20opportunity%20for%20Takshil%20Navadia">Email me
@@ -3820,9 +4479,26 @@
               rel="noopener">LinkedIn ↗</a>
           </div>
         </div>
+        <div class="next reveal">
+          <button class="next-card t-contact" type="button" data-step-go="contact">
+            <span class="next-k">Next up · 04</span>
+            <span class="next-t">Let's talk <i>←</i></span>
+            <span class="next-d">Hiring, or need something built? Get a ready-made email in one click.</span>
+          </button>
+          <div class="explored">
+            <span class="ex-label">You've explored <b data-ex-count>1</b> of 4</span>
+            <div class="ex-bar"><span></span></div>
+            <div class="ex-dots">
+              <button type="button" data-step-go="about" aria-label="About me">01</button>
+              <button type="button" data-step-go="projects" aria-label="Projects">02</button>
+              <button type="button" data-step-go="experience" aria-label="Experience">03</button>
+              <button type="button" data-step-go="contact" aria-label="Contact">04</button>
+            </div>
+          </div>
+        </div>
         <div class="view-end">
           <button class="home-btn" type="button" data-home><i>←</i> Back to start</button>
-          <span>© 2026 TAKSHIL NAVADIA · DESIGNED &amp; BUILT BY ME</span>
+          <span>© 2026 Takshil Navadia · Designed and built by me</span>
         </div>
       </div>
     </section>
@@ -3834,13 +4510,13 @@
       <div class="view-num" aria-hidden="true">04</div>
       <div class="wrap">
         <div class="view-head">
-          <p class="eyebrow reveal"><span class="n">04</span> contact</p>
+          <p class="eyebrow reveal"><span class="n">04</span> Contact</p>
           <h1 class="reveal" data-split>Let's make something <em>happen.</em></h1>
-          <p class="lead reveal" style="--d:300ms">It's <strong data-time>—</strong> for me in Ahmedabad right now.
-            Tell me what brings you here and I'll set up the email for you — you just hit send.</p>
+          <p class="lead reveal" style="--d:300ms">It's <strong data-time></strong> for me in Ahmedabad right now.
+            Tell me what brings you here and I'll set up the email for you. You just hit send.</p>
         </div>
 
-        <p class="eyebrow reveal"><span class="n">1</span> what brings you here?</p>
+        <p class="eyebrow reveal"><span class="n">1</span> What brings you here?</p>
         <div class="choose" role="group" aria-label="Reason for getting in touch" data-stagger>
           <button class="choice reveal" type="button" data-intent="hire" aria-pressed="false"><span
               class="tick">✓</span><span class="ch-ico">💼</span><b>I'm hiring</b><small>A frontend, AI/ML or product
@@ -3866,28 +4542,54 @@
           </div>
         </div>
 
-        <div class="block" style="padding-top:70px;padding-bottom:40px">
-          <p class="eyebrow reveal"><span class="n">2</span> or reach me directly</p>
+        <div class="block contact-direct">
+          <p class="eyebrow reveal"><span class="n">2</span> Or reach me directly</p>
           <div class="direct" data-stagger>
             <a class="reveal" href="mailto:takshilnavadia1245@gmail.com"><span
-                class="k">EMAIL</span><b>takshilnavadia1245@gmail.com</b><small>Fastest way to reach me</small></a>
+                class="k">Email</span><b>takshilnavadia1245@gmail.com</b><small>Fastest way to reach me</small></a>
             <a class="reveal" href="https://www.linkedin.com/in/takshil-navadia-a46626236" target="_blank"
-              rel="noopener"><span class="k">LINKEDIN</span><b>Takshil Navadia ↗</b><small>Connect or send a
+              rel="noopener"><span class="k">LinkedIn</span><b>Takshil Navadia ↗</b><small>Connect or send a
                 message</small></a>
             <a class="reveal" href="https://github.com/Takshil23" target="_blank" rel="noopener"><span
-                class="k">GITHUB</span><b>github.com/Takshil23 ↗</b><small>See the code</small></a>
-            <div class="reveal"><span class="k">BASED IN</span><b>Ahmedabad, India</b><small>Local time <span
-                  data-time>—</span> IST</small></div>
+                class="k">GitHub</span><b>github.com/Takshil23 ↗</b><small>See the code</small></a>
+            <div class="reveal"><span class="k">Based in</span><b>Ahmedabad, India</b><small>Local time <span
+                  data-time></span> IST</small></div>
           </div>
         </div>
 
+        <div class="next reveal">
+          <button class="next-card t-about" type="button" data-step-go="about">
+            <span class="next-k">Start again · 01</span>
+            <span class="next-t">Back to the beginning <i>↓</i></span>
+            <span class="next-d">Read about me, my education and everything I've shipped.</span>
+          </button>
+          <div class="explored">
+            <span class="ex-label">You've explored <b data-ex-count>1</b> of 4</span>
+            <div class="ex-bar"><span></span></div>
+            <div class="ex-dots">
+              <button type="button" data-step-go="about" aria-label="About me">01</button>
+              <button type="button" data-step-go="projects" aria-label="Projects">02</button>
+              <button type="button" data-step-go="experience" aria-label="Experience">03</button>
+              <button type="button" data-step-go="contact" aria-label="Contact">04</button>
+            </div>
+          </div>
+        </div>
         <div class="view-end">
           <button class="home-btn" type="button" data-home><i>←</i> Back to start</button>
-          <span>© 2026 TAKSHIL NAVADIA · DESIGNED &amp; BUILT BY ME</span>
+          <span>© 2026 Takshil Navadia · Designed and built by me</span>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="nudge t-contact" id="nudge" role="status" hidden>
+    <b>You've explored the whole portfolio</b>
+    <p>Thanks for taking the time to look around. If you liked what you saw, let's talk.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button" data-step-go="contact">Contact me <span class="arr">→</span></button>
+      <button class="nudge-x" type="button" id="nudgeX">Maybe later</button>
+    </div>
+  </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -3999,6 +4701,31 @@
       const byId = id => views.find(v => v.id === id);
       let introOpen = true, current = null, lastView = null, introSide = 'right', typed = false;
 
+      const unpin = el => ['position', 'top', 'left', 'right', 'pointerEvents', 'zIndex', 'transform', 'transition'].forEach(k => { el.style[k] = ''; });
+
+      /* ---------- journey: what the visitor has seen, and where to go next ---------- */
+      const visited = new Set();
+      let nudged = false;
+      const nudge = $('#nudge');
+      const markVisited = id => {
+        visited.add(id);
+        $$('[data-step-go]').forEach(b => {
+          const sid = b.dataset.stepGo;
+          if (b.closest('.next-card') || b.closest('.nudge')) return;
+          b.classList.toggle('current', sid === id);
+          b.classList.toggle('seen', visited.has(sid) && sid !== id);
+          if (sid === id) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+        });
+        $$('[data-ex-count]').forEach(el => { el.textContent = visited.size; });
+        $$('.ex-bar span').forEach(el => el.style.setProperty('--p', visited.size * 25 + '%'));
+        if (id === 'contact') nudge.hidden = true;
+        if (!nudged && visited.size === 4 && id !== 'contact') {
+          nudged = true;
+          setTimeout(() => { if (current && current !== 'contact') nudge.hidden = false; }, 2200);
+        }
+      };
+      $('#nudgeX').addEventListener('click', () => { nudge.hidden = true; });
+
       const setIntroHidden = hidden => { intro.inert = hidden; intro.setAttribute('aria-hidden', String(hidden)); };
       const setTheme = id => {
         body.classList.remove('t-about', 't-projects', 't-experience', 't-contact');
@@ -4009,14 +4736,23 @@
         const v = byId(id);
         if (!v || (current === id && !introOpen)) return;
         const prev = current && current !== id ? byId(current) : null;
-        if (prev) { prev.hidden = true; clearTimeout(prev._hide); }
-        views.forEach(o => { if (o !== v && !o.hidden && o !== prev) { clearTimeout(o._hide); o.hidden = true; } });
-        clearTimeout(v._hide);
+        const fromY = scrollY;
+        clearTimeout(v._hide); unpin(v);
+        views.forEach(o => { if (o !== v && o !== prev && !o.hidden) { clearTimeout(o._hide); unpin(o); o.hidden = true; } });
+        if (prev) {
+          clearTimeout(prev._hide);
+          if (SLIDE && !opts.instant) {
+            // pin the old screen where it was, then push it out the opposite way
+            Object.assign(prev.style, { position: 'fixed', top: -fromY + 'px', left: '0', right: '0', pointerEvents: 'none' });
+            v.style.zIndex = '2';
+            slide(prev, [0, 0], VEC[OPP[v.dataset.side]]);
+            prev._hide = setTimeout(() => { prev.hidden = true; unpin(prev); v.style.zIndex = ''; }, SLIDE + 60);
+          } else { prev.hidden = true; unpin(prev); }
+        }
         current = lastView = id;
         setTheme(id);
-        $('#tbNum').textContent = v.dataset.num;
-        $('#tbName').textContent = v.dataset.label;
-        document.title = v.dataset.label + ' — Takshil Navadia';
+        markVisited(id);
+        document.title = v.dataset.label + ' | Takshil Navadia';
         v.hidden = false;
         html.classList.remove('loading');
         body.classList.add('in-view');
@@ -4054,7 +4790,8 @@
         setIntroHidden(false);
         html.classList.add('loading');
         body.classList.remove('in-view');
-        document.title = 'Takshil Navadia — Software Developer';
+        nudge.hidden = true;
+        document.title = 'Takshil Navadia | Software Developer';
         startCanvas();
         if (v) {
           slide(v, null, VEC[v.dataset.side]);
@@ -4068,6 +4805,7 @@
       $$('#intro [data-go]').forEach(b => b.addEventListener('click', () => openView(b.dataset.go)));
       resumeBtn.addEventListener('click', () => lastView && openView(lastView));
       $$('[data-home]').forEach(b => b.addEventListener('click', () => openIntro()));
+      $$('[data-step-go]').forEach(b => b.addEventListener('click', () => { nudge.hidden = true; openView(b.dataset.stepGo); }));
       addEventListener('popstate', () => {
         const id = location.hash.slice(1);
         if (byId(id)) openView(id, { fromHistory: true });
@@ -4233,7 +4971,7 @@
       /* ---------- contact: choose a reason, get a ready-made email ---------- */
       const INTENTS = {
         hire: {
-          title: 'Great — let\'s talk about the role.',
+          title: 'Great, let\'s talk about the role.',
           text: 'The email opens pre-filled. Just add these details:',
           list: ['Role & team', 'Company', 'Location or remote', 'Your timeline'],
           subject: 'Role opportunity for Takshil Navadia',
@@ -4334,6 +5072,10 @@
         cine.style.setProperty('--s1', s1);
         cine.style.setProperty('--tx', (C[0] - O[0] - s1 * (Wn[0] - O[0])) + 'px');
         cine.style.setProperty('--ty', (C[1] - O[1] - s1 * (Wn[1] - O[1])) + 'px');
+        // the laptop screen must fit between the black bars on short or narrow windows
+        const scr = $('.cine-screen', cine);
+        const k = Math.min(1, innerHeight * .78 / scr.offsetHeight, innerWidth * .96 / scr.offsetWidth);
+        cine.style.setProperty('--cs-s', k.toFixed(3));
       };
 
       let cineTimers = [], cineDone = null, cinePlaying = false;
@@ -4373,11 +5115,12 @@
         const t1 = t0 + q.length * 85 + 350;
         at(t1, () => ph('p-enter'));
         at(t1 + 350, () => {
-          ph('p-results'); cap('Found him.');
+          ph('p-results'); cap('Found him');
           const hit = $('.cs-res.hit', cine), body = $('.cs-body', cine);
           const hb = hit.getBoundingClientRect(), bb = body.getBoundingClientRect();
-          csCursor.style.left = (hb.left - bb.left + hb.width * .45) + 'px';
-          csCursor.style.top = (hb.top - bb.top + hb.height * .45) + 'px';
+          const k = parseFloat(getComputedStyle(cine).getPropertyValue('--cs-s')) || 1;
+          csCursor.style.left = ((hb.left - bb.left) / k + hit.offsetWidth * .42) + 'px';
+          csCursor.style.top = ((hb.top - bb.top) / k + 46) + 'px';
         });
         at(t1 + 1500, () => ph('p-click'));
         at(t1 + 1850, () => ph('p-go'));
@@ -4388,16 +5131,11 @@
       $('#replayCine').addEventListener('click', () => playCine(() => $('.opt', intro).focus({ preventScroll: true })));
 
       /* ---------- first load ---------- */
-      // the film plays on every load; a link to a screen (e.g. #projects) opens that screen after it
-      const startId = location.hash.slice(1);
-      if (!byId(startId) && location.hash) history.replaceState(null, '', location.pathname + location.search);
-      const afterFilm = () => {
-        if (byId(startId)) openView(startId, { fromHistory: true });
-        else typeName();
-      };
+      // every load and reload: the film plays, then the start screen
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
       startCanvas();
-      if (reduce) afterFilm();
-      else playCine(afterFilm);
+      if (reduce) typeName();
+      else playCine(typeName);
     })();
   </script>
 </body>
